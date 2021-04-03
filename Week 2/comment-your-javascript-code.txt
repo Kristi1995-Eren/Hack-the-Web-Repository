@@ -1,0 +1,2 @@
+// Kitty App will have wallpapers.
+/* Photos will have high resolution */
