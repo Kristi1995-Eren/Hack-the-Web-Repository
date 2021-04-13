@@ -1,0 +1,72 @@
+function largestOfFour(arr) {
+  let results = [];
+  for (let i = 0; i < arr.length; i++) {
+    let largestNumber = arr[i][0];
+    for (let j = 1; j < arr[i].length; j++) {
+      if (arr[i][j] > largestNumber) {
+        largestNumber = arr[i][j];
+      }
+    }
+    results[i] = largestNumber;
+  }
+
+  return results;
+}
+
+largestOfFour([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]]);
+function reverseString(str) {
+  return str
+  .split("")
+    .reverse()
+    .join("");
+}
+
+reverseString("hello");
+function truncateString(str, num) {
+   return str.length > num ? str.slice(0, num) + "..." : str;
+}
+truncateString("A-tisket a-tasket A green and yellow basket", 8);
+function confirmEnding(str, target) {
+  return str.slice(-target.length) === target
+;
+}
+
+confirmEnding("Bastian", "n");
+function convertToF(celsius) {
+  let fahrenheit = celsius * (9/5) + 32;
+  return fahrenheit;
+}
+
+convertToF(30);
+function factorialize(num) {
+  for (var product = 1; num > 0; num--) {
+    product *= num;
+  }
+  return product;
+}
+
+factorialize(5);
+function findLongestWordLength(str) {
+ let words = str.split(' ');
+  let maxLength = 0;
+
+  for (let i = 0; i < words.length; i++) {
+    if (words[i].length > maxLength) {
+      maxLength = words[i].length;
+    }
+  }
+
+  return maxLength;
+}
+findLongestWordLength("The quick brown fox jumped over the lazy dog");
+function repeatStringNumTimes(str, num) {
+  var accumulatedStr = "";
+
+  while (num > 0) {
+    accumulatedStr += str;
+    num--;
+  }
+
+  return accumulatedStr;
+}
+repeatStringNumTimes("abc", 3);
